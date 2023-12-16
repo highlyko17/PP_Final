@@ -12,6 +12,9 @@ public class BoardVO {
 
     private Date updateDate;
 
+    public BoardVO() {
+    }
+
     public Date getRegDate() {
         return regDate;
     }
@@ -77,6 +80,4 @@ public class BoardVO {
     public void setRegDate(Date regDate) {
         this.regDate = regDate;
     }
-
-
 }

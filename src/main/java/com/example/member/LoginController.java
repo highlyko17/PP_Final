@@ -25,26 +25,10 @@ public class LoginController {
         }
 
 
-//        UserVO loginvo = service.getUser(vo);
-//        if ( loginvo != null ){ // 로그인 성공
-//            System.out.println("로그인 성공!");
-//            session.setAttribute("login", loginvo);
-//            returnURL = "redirect:/board/list";
-//        }else { // 로그인 실패
-//            System.out.println("로그인 실패!");
-//            returnURL = "redirect:/login/login";
-//        }
-//        return returnURL;
-
-        // 자동로그인
-        if ("1".equals(vo.getUserid()) && "1234".equals(vo.getPassword())) {
-            UserVO hardCodedLogin = new UserVO();
-            hardCodedLogin.setUserid(vo.getUserid());
-            hardCodedLogin.setPassword(vo.getPassword());
-            hardCodedLogin.setUsername("Hardcoded User");
-
+        UserVO loginvo = service.getUser(vo);
+        if ( loginvo != null ){ // 로그인 성공
             System.out.println("로그인 성공!");
-            session.setAttribute("login", hardCodedLogin);
+            session.setAttribute("login", loginvo);
             returnURL = "redirect:/board/list";
         } else { // 로그인 실패
             System.out.println("로그인 실패!");

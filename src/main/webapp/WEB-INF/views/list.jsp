@@ -78,6 +78,7 @@
 </head>
 <body>
 <h1>오무식카가</h1>
+
 <table id="list" width="90%">
 	<tr>
 		<th>Id</th>
